@@ -10,9 +10,9 @@ public class IteratorTest {
 		c.add("aaa");
 		c.add("bbbb");
 		c.add("c");
-		Iterator i =c.iterator();
+		Iterator<String> i =c.iterator();
 		while(i.hasNext()){
-			String s=(String) i.next();
+			String s= i.next();
 			
 			if(s.length()>3){
 				i.remove();
@@ -21,6 +21,15 @@ public class IteratorTest {
 			System.out.println(s);
 			//System.out.println((String)i.next());
 		}
+		System.out.println("------");
+		//foreach±éÀúÈ·ÈÏÉ¾³ı
+		for(String s:c){
+			System.out.println(s);
+		}
+		System.out.println();
+		
+		String a ="bbbbb";
+		System.out.println(a.length());
 	}
 
 }
