@@ -38,5 +38,6 @@ public class CopyDemo01 {
 			System.out.println("文件复制出错！");
 			System.exit(-1);
 		}
+		System.out.println("文件已复制");
 	}
 }
