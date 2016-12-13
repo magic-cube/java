@@ -41,7 +41,7 @@ class Producer implements Runnable{
 			System.out.println("生产者正在向缓冲区中放第"+i+"个WoTou...");
 			//生产者每次放完，睡眠一秒，放大效果
 			try{
-				Thread.sleep(100);
+				Thread.sleep(1000);
 			}catch(InterruptedException e){
 				e.printStackTrace();
 			}
@@ -76,8 +76,8 @@ class SynStack{
 	WoTou [] arrWT=new WoTou[6];
 	
 	public synchronized void push(WoTou w){
-		//缓冲区满，等待
-		if(index==arrWT.length){
+		//缓冲区满，等待，使用if会存在潜在的危险
+		while(index==arrWT.length){
 			System.out.println("\n缓冲区满，生产者等待\n");
 			try{
 				this.wait();
@@ -91,8 +91,8 @@ class SynStack{
 		index++;
 	}
 	public synchronized WoTou pop(){
-		//缓冲区空，等待
-		if(index==0){
+		//缓冲区空，等待,使用if会存在潜在的危险
+		while(index==0){
 			System.out.println("\n缓冲区空，消费者等待\n");
 			try{
 				this.wait();
