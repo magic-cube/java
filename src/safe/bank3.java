@@ -1,5 +1,7 @@
 package safe;
-
+/**
+ * 不能多次分配，此时work与available指向同一个地方
+ */
 import java.util.Scanner;
 
 public class bank3 {
