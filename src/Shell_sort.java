@@ -23,7 +23,7 @@ public class Shell_sort {
 	}
 	public static void InsertionSort(int a[],int n){
 		for(int j=1;j<n;j++){
-			int temp=a[j];   /*摸下一张牌*/
+			int temp=a[j];   
 			int i;
 			for(i=j;i>0&&a[i-1]>temp;i--){
 				a[i]=a[i-1];
@@ -32,9 +32,25 @@ public class Shell_sort {
 			a[i]=temp;
 		}
 	}
+	public static void BubbleSort(int a[],int n){
+		for(int j=1;j<n;j++){
+			int flag=0;
+			for(int i=0;i<n-j;i++){
+				if(a[i]>a[i+1]){
+					int temp=a[i];
+					a[i]=a[i+1];
+					a[i+1]=temp;
+					flag=1;
+				}
+				if(flag==0){
+					break;
+				}
+			}
+		}
+	}
 	public static void main(String args[]){
-		int a[]={0,89,2,23,1,56,9,15,7,24,9,24,78,98,6,54,33,12,76,88,34,99};
-		int b[]={0,89,2,23,1,56,9,15,7,24,9,24,78,98,6,54,33,12,76,88,34,100};
+		int a[]={0,89,2,23,1,56,92,15,7,21,9,24,78,98,6,54,33,12,76,88,34,99};
+		int b[]={0,89,2,23,1,56,92,15,7,21,9,24,78,98,6,54,33,12,76,88,34,100};
 		int n=a.length;
 		ShellSort(a,n);
 		System.out.println("希尔排序结果：");
@@ -50,7 +66,7 @@ public class Shell_sort {
 			System.out.print(a[i]+" ");
 		}
 		System.out.println();
-		System.out.println("共进行了"+count1+"c次交换");
+		System.out.println("共进行了"+count1+"次交换");
 		
 		
 
