@@ -22,11 +22,11 @@ public class PrintDemo1 {
 		int len2=0;
 		for(int i=0;i<300;i++){
 			System.out.print((char)i);
-			//间隔二十个字符换一列
-			if(len2++>=20){
-				System.out.print("\t");
-				len2=0;
-			}
+//			//间隔二十个字符换一列
+//			if(len2++>=20){
+//				System.out.print("\t");
+//				len2=0;
+//			}
 			//设置间隔一百个字符换一行
 			if(len++>=60){
 				System.out.println();
