@@ -12,6 +12,8 @@ public class TestDataStream {
 		DataOutputStream ds=new DataOutputStream(baos);
 		try{
 			//写进字节数组
+			//之前只能写字节，用个BufferedWriter也就写个字符串
+			//现在可以写各种基本类型
 			ds.writeDouble(Math.random());
 			ds.writeBoolean(true);
 			ByteArrayInputStream bais= new ByteArrayInputStream(baos.toByteArray());
