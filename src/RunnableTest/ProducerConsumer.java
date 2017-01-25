@@ -41,7 +41,7 @@ class Producer implements Runnable{
 			System.out.println("生产者正在向缓冲区中放第"+i+"个WoTou...");
 			//生产者每次放完，睡眠一秒，放大效果
 			try{
-				Thread.sleep(1000);
+				Thread.sleep(100);
 			}catch(InterruptedException e){
 				e.printStackTrace();
 			}
