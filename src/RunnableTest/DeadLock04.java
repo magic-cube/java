@@ -9,7 +9,7 @@ package RunnableTest;
  * 避免死锁：不让系统进入不安全状态，银行家算法和安全性算法
  * 检测死锁和接触死锁：剥夺资源或是撤销进程(线程)
  * @author hc
- *
+ * 
  */
 public class DeadLock04 implements Runnable{
 	private boolean flag=true;
