@@ -21,7 +21,7 @@ public class Reflection02 {
 		Method method=c.getDeclaredMethod("getUname", null);
 		User u2=(User)c.newInstance();
 		
-		//method.setAccessible(true);未关闭安全访问检查
+		//method.setAccessible(true);   //未关闭安全访问检查
 		long startTime=System.currentTimeMillis();
 		for(int i=0;i<1000000000L;i++){
 			method.invoke(u2, null);
