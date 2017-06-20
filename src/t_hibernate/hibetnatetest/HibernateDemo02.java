@@ -35,7 +35,7 @@ public class HibernateDemo02 {
 			e.printStackTrace();
 			tx.rollback();
 		}finally{
-			session.close();
+			//session.close();
 		}
 		
 	}
